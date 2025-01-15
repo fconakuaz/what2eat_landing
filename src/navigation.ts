@@ -99,16 +99,7 @@ export const footerData = {
         { text: 'Resources', href: '#' },
       ],
     },
-    {
-      title: 'Platform',
-      links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
-      ],
-    },
+
     {
       title: 'Support',
       links: [
