@@ -1,7 +1,7 @@
 {
-  "name": "@onwidget/astrowind",
+  "name": "@fconakuaz/what2eat",
   "version": "1.0.0-beta.49",
-  "description": "AstroWind: A free template using Astro 5.0 and Tailwind CSS. Astro starter theme.",
+  "description": "What2Eat: Eat Smart.",
   "type": "module",
   "private": true,
   "engines": {

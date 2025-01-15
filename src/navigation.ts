@@ -28,9 +28,7 @@ export const headerData = {
       href: '/#FAQs',
     },
   ],
-  actions: [
-    { text: 'Iniciar sesión', href: 'https://github.com/onwidget/astrowind', target: '_blank', icon: 'tabler:user' },
-  ],
+  actions: [{ text: 'Iniciar sesión', href: '#', target: '_blank', icon: 'tabler:user' }],
 };
 
 // export const headerData = {
@@ -83,7 +81,7 @@ export const headerData = {
 //     },
 //   ],
 //   actions: [
-//     { text: 'Iniciar sesión', href: 'https://github.com/onwidget/astrowind', target: '_blank', icon: 'tabler:user' },
+//     { text: 'Iniciar sesión', href: '#', target: '_blank', icon: 'tabler:user' },
 //   ],
 // };
 
@@ -143,7 +141,7 @@ export const footerData = {
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: '#' },
   ],
   footNote: `
     
