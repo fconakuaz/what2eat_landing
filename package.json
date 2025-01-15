@@ -22,9 +22,9 @@
     "fix:prettier": "prettier -w ."
   },
   "dependencies": {
-    "@astrojs/node": "^9.0.1",
     "@astrojs/rss": "^4.0.10",
     "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/vercel": "^8.0.2",
     "@astrolib/analytics": "^0.6.1",
     "@astrolib/seo": "^1.0.0-beta.8",
     "@clerk/astro": "^2.1.7",
