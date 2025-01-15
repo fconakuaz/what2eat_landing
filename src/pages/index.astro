@@ -10,6 +10,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 
 const metadata = {
   title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
@@ -224,6 +225,41 @@ const metadata = {
       { title: 'Stars', amount: '24.8K' },
       { title: 'Forks', amount: '10.3K' },
       { title: 'Users', amount: '48.4K' },
+    ]}
+  />
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Opiniones de usuarios reales"
+    testimonials={[
+      {
+        testimonial: `What2Eat ha transformado completamente la forma en que planeo mis comidas. Ahora puedo aprovechar al máximo los ingredientes que tengo en casa y reducir el desperdicio. ¡Es una app imprescindible!`,
+        name: 'Fernanda Giménez',
+        job: 'Desarrolladora front-end',
+        image: {
+          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+          alt: 'Emily Kennedy Image',
+        },
+      },
+      {
+        testimonial: `La app no solo me ayuda a planificar menús saludables, sino que también me asegura que estoy siguiendo mis objetivos de bienestar al integrarla con Google Fit. ¡Es sencilla y poderosa!`,
+        name: 'Sarah Pérez',
+        job: 'Fotógrafa',
+        image: {
+          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Sarah Hansen Image',
+        },
+      },
+      {
+        testimonial: `What2Eat me ha ayudado a mantener una dieta equilibrada sin complicaciones. Ahora puedo planificar comidas rápidas y personalizadas para toda mi familia. ¡Mis hijos también lo aman!`,
+        name: 'Jose Luis Echeverría',
+        job: 'Pequeño empresario',
+        image: {
+          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+          alt: 'Mark Wilkinson Image',
+        },
+      },
     ]}
   />
 
