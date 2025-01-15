@@ -16,7 +16,7 @@ import astrowind from './vendor/integration';
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter';
 
-import vercel from '@astrojs/vercel';
+import node from '@astrojs/node';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -32,7 +32,7 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     sitemap(),
-
+    clerk(),
     mdx(),
     icon({
       include: {
@@ -73,8 +73,6 @@ export default defineConfig({
     astrowind({
       config: './src/config.yaml',
     }),
-
-    clerk(),
   ],
 
   image: {
@@ -94,5 +92,7 @@ export default defineConfig({
     },
   },
 
-  adapter: vercel(),
+  adapter: node({
+    mode: 'standalone',
+  }),
 });
