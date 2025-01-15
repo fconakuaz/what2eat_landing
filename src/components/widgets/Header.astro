@@ -3,7 +3,7 @@ import { Icon } from 'astro-icon/components';
 import Logo from '~/components/Logo.astro';
 import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
-import Button from '~/components/ui/Button.astro';
+import { SignedIn, SignedOut, UserButton, SignInButton } from '@clerk/astro/components';
 
 import { getHomePermalink } from '~/utils/permalinks';
 import { trimSlash } from '~/utils/permalinks';
@@ -35,7 +35,6 @@ export interface Props {
 const {
   id = 'header',
   links = [],
-  actions = [],
   isSticky = false,
   isDark = false,
   isFullWidth = false,
@@ -139,21 +138,29 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
           {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />}
           <span class="mt-2 rtl:ml-0 rtl:mr-4"> ES </span>
         </div>
-        {
-          actions?.length ? (
-            <span class="ml-4 rtl:ml-0 rtl:mr-4">
-              {actions.map((btnProps) => (
-                <Button
-                  variant="primary"
-                  {...btnProps}
-                  class="ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
-                />
-              ))}
-            </span>
-          ) : (
-            ''
-          )
-        }
+        <div class="flex ml-5">
+          <SignedOut>
+            <SignInButton mode="modal" forceRedirectUrl="/dashboard" asChild>
+              <button>Iniciar sesión</button>
+            </SignInButton>
+          </SignedOut>
+          <SignedIn>
+            <UserButton>
+              <!-- <UserButton.MenuItems>
+                <UserButton.Action label="Open chat" clickIdentifier="open_chat">
+                  <svg slot="label-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+                    <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"></path>
+                  </svg>
+                </UserButton.Action>
+                <UserButton.Action label="Open cart" clickIdentifier="open_cart">
+                  <svg slot="label-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+                    <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"></path>
+                  </svg>
+                </UserButton.Action>
+              </UserButton.MenuItems> -->
+            </UserButton>
+          </SignedIn>
+        </div>
       </div>
     </div>
   </div>
