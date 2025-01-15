@@ -9,7 +9,7 @@
 - ✅ **Personalización** para dietas especiales: vegetariana, sin gluten, alta en proteínas, etc.
 - ✅ **Gestión eficiente de inventarios**: usa lo que tienes en tu despensa antes de que caduque.
 - ✅ **Interfaz fácil de usar**, rápida y optimizada.
-- ✅ **Multilingüe**, con soporte para varios idiomas.
+- ✅ **Multilingüe**, con soporte para varios idiomas (Español/Inglés).
 
 <br>
 
