@@ -15,6 +15,10 @@ import astrowind from './vendor/integration';
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter';
 
+import auth from 'auth-astro';
+
+import vercel from '@astrojs/vercel';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const hasExternalScripts = false;
@@ -22,7 +26,7 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
-  output: 'static',
+  output: 'server',
 
   integrations: [
     tailwind({
@@ -30,6 +34,7 @@ export default defineConfig({
     }),
     sitemap(),
     mdx(),
+    auth(),
     icon({
       include: {
         tabler: ['*'],
@@ -46,13 +51,11 @@ export default defineConfig({
         ],
       },
     }),
-
     ...whenExternalScripts(() =>
       partytown({
         config: { forward: ['dataLayer.push'] },
       })
     ),
-
     compress({
       CSS: true,
       HTML: {
@@ -65,7 +68,6 @@ export default defineConfig({
       SVG: false,
       Logger: 1,
     }),
-
     astrowind({
       config: './src/config.yaml',
     }),
@@ -87,4 +89,6 @@ export default defineConfig({
       },
     },
   },
+
+  adapter: vercel(),
 });
