@@ -15,9 +15,6 @@ import astrowind from './vendor/integration';
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter';
 
-import node from '@astrojs/node';
-import clerk from '@clerk/astro';
-
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const hasExternalScripts = false;
@@ -25,10 +22,9 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
-  output: 'server',
+  output: 'static',
 
   integrations: [
-    clerk(),
     tailwind({
       applyBaseStyles: false,
     }),
@@ -91,8 +87,4 @@ export default defineConfig({
       },
     },
   },
-
-  adapter: node({
-    mode: 'standalone',
-  }),
 });
