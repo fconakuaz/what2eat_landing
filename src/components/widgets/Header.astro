@@ -8,6 +8,10 @@ import { getHomePermalink } from '~/utils/permalinks';
 import { trimSlash } from '~/utils/permalinks';
 import type { CallToAction } from '~/types';
 
+import { SignIn, SignOut } from 'auth-astro/components';
+import { getSession } from 'auth-astro/server';
+const session = await getSession(Astro.request);
+
 interface Link {
   text?: string;
   href?: string;
@@ -138,7 +142,17 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
           <span class="mt-2 rtl:ml-0 rtl:mr-4"> ES </span>
         </div>
         <div class="flex ml-5">
-          <button>Iniciar sesión</button>
+          <!-- <button>Iniciar sesión</button> -->
+          {
+            session ? (
+              <>
+                <p>Hola {session.user?.email}</p>
+                <SignOut>Cerrar Sesión</SignOut>
+              </>
+            ) : (
+              <SignIn provider="google">Iniciar sesión</SignIn>
+            )
+          }
         </div>
       </div>
     </div>
