@@ -8,8 +8,9 @@ import { getHomePermalink } from '~/utils/permalinks';
 import { trimSlash } from '~/utils/permalinks';
 import type { CallToAction } from '~/types';
 
-import { SignIn, SignOut } from 'auth-astro/components';
 import { getSession } from 'auth-astro/server';
+// import HeaderUser from './HeaderUser.astro';
+import MenuAvatar from './react/MenuAvatar';
 const session = await getSession(Astro.request);
 
 interface Link {
@@ -145,12 +146,10 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
           <!-- <button>Iniciar sesión</button> -->
           {
             session ? (
-              <>
-                <p>Hola {session.user?.email}</p>
-                <SignOut>Cerrar Sesión</SignOut>
-              </>
+              <MenuAvatar />
             ) : (
-              <SignIn provider="google">Iniciar sesión</SignIn>
+              // <HeaderUser />
+              <a href={import.meta.env.URL_LOGIN}>Iniciar sesión</a>
             )
           }
         </div>

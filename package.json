@@ -22,6 +22,7 @@
     "fix:prettier": "prettier -w ."
   },
   "dependencies": {
+    "@astrojs/react": "^4.1.5",
     "@astrojs/rss": "^4.0.10",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/vercel": "^8.0.2",
@@ -29,6 +30,8 @@
     "@astrolib/seo": "^1.0.0-beta.8",
     "@auth/core": "^0.37.4",
     "@fontsource-variable/inter": "^5.1.0",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
     "astro": "^5.0.3",
     "astro-embed": "^0.9.0",
     "astro-icon": "^1.1.4",
@@ -36,7 +39,10 @@
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
     "lucia": "^3.2.2",
-    "unpic": "^3.22.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "unpic": "^3.22.0",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
