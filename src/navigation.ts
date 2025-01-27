@@ -28,7 +28,7 @@ export const headerData = {
       href: '/#FAQs',
     },
   ],
-  actions: [{ text: 'Iniciar sesión', href: '#', target: '_blank', icon: 'tabler:user' }],
+  actions: [{ text: 'Iniciar sesión', href: import.meta.env.URL_LOGIN, target: '_blank', icon: 'tabler:user' }],
 };
 
 // export const headerData = {
