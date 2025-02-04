@@ -1,21 +1,21 @@
-# 🍎 What2Eat
+<h1 align="center"><strong>🍎What2Eat</strong></h1>
+<h3 align="center"><strong>Página de producto (landingpage)</strong></h3>
 
-🌟 _Tu asistente inteligente para planificar comidas personalizadas_. 🌟
-
-**What2Eat** es una aplicación web diseñada para ayudarte a crear menús diarios personalizados utilizando **inteligencia artificial**. Basada en los ingredientes que tienes disponibles y tus preferencias alimenticias, What2Eat te permite optimizar tu alimentación, ahorrar tiempo y reducir desperdicios.
-
-- ✅ **Generación de menús inteligentes** con IA.
-- ✅ **Compatibilidad con Google Fit** para ajustar tus menús según tu actividad física.
-- ✅ **Personalización** para dietas especiales: vegetariana, sin gluten, alta en proteínas, etc.
-- ✅ **Gestión eficiente de inventarios**: usa lo que tienes en tu despensa antes de que caduque.
-- ✅ **Interfaz fácil de usar**, rápida y optimizada.
-- ✅ **Multilingüe**, con soporte para varios idiomas (Español/Inglés).
+<br />
+<div align="center">
+<a style="font-size: 18px" href="https://what2eat-landing.vercel.app/">Demo</a>
+<span> · </span>
+<a style="font-size: 18px" href="https://github.com/fconakuaz/what2eat_landing">Repositorio en Git</a>
+ 
+</div>
 
 <br>
 
 <img src="public/thumbW.webp" alt="What2Eat Screenshot">
  
 <br>
+
+Página de producto de **What2Eat** es una aplicación web diseñada para ayudarte a crear menús diarios personalizados utilizando **inteligencia artificial**. Basada en los ingredientes que tienes disponibles y tus preferencias alimenticias, What2Eat te permite optimizar tu alimentación, ahorrar tiempo y reducir desperdicios.
 
 <details open>
 <summary>Índice</summary>
@@ -34,22 +34,6 @@
 </details>
 
 <br>
-
-## Demo
-
-https://what2eat-three.vercel.app/
-
-<br>
-
-## Características principales
-
-- **Menús personalizados:** Genera comidas adaptadas a tus gustos y necesidades.
-- **Conexión con Google Fit:** Ajusta las calorías y nutrientes de tus menús según tu actividad física.
-- **Gestión de inventarios:** Aprovecha al máximo los ingredientes que tienes antes de que caduquen.
-- **Sostenibilidad:** Reduce desperdicios y fomenta un estilo de vida más consciente.
-- **Fácil integración:** Interfaz moderna, rápida y accesible.
-
----
 
 ## Estructura del proyecto
 
@@ -77,41 +61,40 @@ https://what2eat-three.vercel.app/
 └── ...
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Astro busca archivos .astro o .md en el directorio src/pages/. Cada página se expone como una ruta basada en el nombre del archivo.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+El directorio src/components/ se usa para almacenar componentes de Astro, React, Vue, Svelte o Preact.
 
-Any static assets, like images, can be placed in the `public/` directory if they do not require any transformation or in the `assets/` directory if they are imported directly.
-
-<br>
-
-### Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command             | Action                                             |
-| :------------------ | :------------------------------------------------- |
-| `npm install`       | Installs dependencies                              |
-| `npm run dev`       | Starts local dev server at `localhost:4321`        |
-| `npm run build`     | Build your production site to `./dist/`            |
-| `npm run preview`   | Preview your build locally, before deploying       |
-| `npm run check`     | Check your project for errors                      |
-| `npm run fix`       | Run Eslint and format codes with Prettier          |
-| `npm run astro ...` | Run CLI commands like `astro add`, `astro preview` |
+Cualquier recurso estático, como imágenes, puede colocarse en el directorio public/ si no requiere transformación, o en assets/ si necesita ser importado directamente.
 
 <br>
 
+### Comandos
+
+Todos los comandos se ejecutan desde la raíz del proyecto, en una terminal:
+
+| Command             | Action                                              |
+| :------------------ | :-------------------------------------------------- |
+| `npm install`       | Instala dependencias                                |
+| `npm run dev`       | Inicia el servidor local en localhost:4321          |
+| `npm run build`     | Construye la versión de producción en ./dist        |
+| `npm run preview`   | Previsualiza el sitio antes de desplegarlo          |
+| `npm run check`     | Verifica el proyecto en busca de errores            |
+| `npm run fix`       | Ejecuta Eslint y formatea el código con Prettier    |
+| `npm run astro ...` | Ejecuta comandos CLI como astro add o astro preview |
+
+<br>
 
 ### Deploy
 
-#### Deploy to production (manual)
+#### Desplegar en producción (manual)
 
-You can create an optimized production build with:
+Puedes crear una versión optimizada para producción con:
 
 ```shell
 npm run build
 ```
 
-Now, your website is ready to be deployed. All generated files are located at
-`dist` folder, which you can deploy the folder to any hosting service you
-prefer.
+Una vez generado, tu sitio estará listo para desplegarse. Todos los archivos generados se encuentran en la carpeta dist, que puedes subir al servicio de hosting de tu preferencia.
+
+**Creado por [Francisco Nakú Acosta Zárate](#)**
